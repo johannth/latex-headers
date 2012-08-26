@@ -1,0 +1,184 @@
+\ProvidesPackage{math}
+
+% ----- Mathematical packages ----- %
+\usepackage[intlimits]{amsmath}
+\usepackage{amsfonts, amssymb, amsthm}
+
+% ----- Settings ----- %
+\frenchspacing
+\numberwithin{equation}{section}
+\linespread{1.1}
+
+% ---- Custom environments ----- %
+{\theoremstyle{definition}
+\newtheorem*{problem}{Dæmi}
+}
+
+{\theoremstyle{definition}
+\newtheorem*{remark}{Athugasemd}
+}
+
+{\theoremstyle{definition}
+\newtheorem*{example}{Dæmi}
+}
+
+{\theoremstyle{definition}
+\newtheorem*{definition}{Skilgreining}
+}
+
+{\theoremstyle{plain}
+\newtheorem*{theorem}{Setning}
+}
+
+{\theoremstyle{definition}
+\newtheorem*{axiom}{Frumsenda}
+}
+
+
+{\theoremstyle{plain}
+\newtheorem*{lemma}{Hjálparsetning}
+}
+
+
+{\theoremstyle{plain}
+\newtheorem*{corollary}{Fylgisetning}
+}
+
+% ----- General mathematical symbols----- %
+\newcommand{\f}[2]{\frac{#1}{#2}}
+\newcommand{\ef}{\text{ef }}
+\newcommand{\og}{\qquad \text{ og } \qquad }
+
+\newcommand{\define}{:=}
+\newcommand{\enifed}{=:}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\Hp}{\mathbb{H}}
+\newcommand{\xR}{\overline{\R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\renewcommand{\S}{\mathbb{S}}
+\newcommand{\B}{\mathbb{B}}
+
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\id}{\operatorname{id}}
+
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\length}[1]{\left|#1\right|}
+\newcommand{\abs}[1]{| #1 |}
+
+\newcommand{\isomorphic}{\cong}
+
+\newcommand{\sign}{\operatorname{sign}}
+\renewcommand{\mod}{\operatorname{mod}}
+
+\newcommand{\inj}{\operatorname{in}}
+\newcommand{\pr}{\operatorname{pr}}
+
+% ----- Categories ----- %
+\newcommand{\vecspace}{\mathcal{V}_{\mathcal{C}}}
+
+% ----- Analysis ----- %
+\newcommand{\oball}[2]{\mathbf{B}_{#1}(#2)}
+\newcommand{\oballn}[3]{\mathbf{B}_{#1}^{#2}(#3)}
+\newcommand{\cball}[2]{\overline{\mathbf{B}}_{#1}(#2)}
+\newcommand{\cballn}[3]{\overline{\mathbf{B}_{#1}^{#2}(#3)}}
+\newcommand{\sphere}[2]{\mathbf{S}_{#1}(#2)}
+\newcommand{\spheren}[3]{\mathbf{S}_{#1}^{#2}(#3)}
+\newcommand{\unitcircle}[1]{\mathbb{S}_{#1}}
+\newcommand{\pa}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\grad}{\operatorname{grad}}
+\newcommand{\rot}{\operatorname{rot}}
+\newcommand{\divop}{\operatorname{div}}
+
+\newcommand{\Jacobi}[1]{\mathbf{J}#1}
+\newcommand{\derivative}[2]{\mathbf{D}_{#2}#1}
+% \newcommand{\graph}[1]{\Gamma(#1)}
+\newcommand{\supp}[1]{\operatorname{supp}(#1)}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\partoperator}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\partopincoord}[2]{\frac{\partial}{\partial #1} \Big \rvert_{#2}}
+\newcommand{\deropincoord}[2]{\frac{d}{d #1} \Big \rvert_{#2}}
+\newcommand{\dC}{\mathcal{C}}
+\newcommand{\Lin}{\mathcal{L}}
+\newcommand{\tensorfield}[2]{\mathcal{T}^{#1}(#2)}
+\newcommand{\smoothmaps}[1]{\mathcal{E}(#1)}
+\newcommand{\ksmoothmaps}[2]{\mathcal{E}^{#1}(#2)}
+\newcommand{\Der}{\operatorname{Der}}
+
+% ----- Analysis on manifolds ----- %
+\newcommand{\dform}{\mathcal{E}}
+\newcommand{\deRham}[2]{H_{dR}^{#1}(#2) }
+
+% ----- Probability theory ----- %
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\Exp}{\mathbb{E}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Markov}{\operatorname{Markov}}
+
+% ----- Measure and integration ----- %
+\newcommand{\lint}{\underline{\int}}
+\newcommand{\uint}{\overline{\int}}
+\newcommand{\ilength}[1]{l(#1)}
+\newcommand{\leastsigma}[1]{#1^\sigma}
+\newcommand{\completion}[1]{\overline{#1}}
+\newcommand{\Borel}[1]{\mathcal{B}_{#1}}
+
+
+% ----- Complex analysis ----- %
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+% ----- Linear algebra ----- %
+\newcommand{\0}{\vec{0}}
+\newcommand{\x}{\vec{x}}
+\newcommand{\y}{\vec{y}}
+\newcommand{\z}{\vec{z}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\iproduct}[2]{\langle #1, #2 \rangle}
+\newcommand{\vlength}[1]{\left \| #1 \right \|}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Span}[1]{\operatorname{Span}( #1 )}
+
+% ----- Set theory ----- %
+\renewcommand{\emptyset}{\varnothing}
+\renewcommand{\complement}[1]{#1^{C}}
+\newcommand{\cl}[1]{\overline{#1}}
+\newcommand{\interior}[1]{\left (#1 \right )^\circ}
+\newcommand{\union}{\cup}
+\newcommand{\Union}{\bigcup}
+\newcommand{\intersection}{\cap}
+\newcommand{\Intersection}{\bigcap}
+\newcommand{\boundary}[1]{\partial #1}
+\newcommand{\cfunction}{\chi}
+\newcommand{\powerset}[1]{\mathcal{P}\left ( #1 \right )}
+
+% ----- Algebra ----- %
+\newcommand{\fst}{\operatorname{fst}}
+\newcommand{\spst}{\operatorname{spst}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\Coker}{\operatorname{Coker}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Tensor}{\bigotimes}
+\newcommand{\tensor}{\otimes}
+\newcommand{\Wedge}{\bigwedge{\vphantom{a}}}
+\newcommand{\dual}[1]{#1^{\vee}}
+\newcommand{\torsion}[1]{\tau(#1)}
+\newcommand{\conjugate}[1]{\overline{#1}}
+\newcommand{\Alt}{\operatorname{Alt}}
+\newcommand{\Ann}{\operatorname{Ann}}
+
+% ----- Group theory ----- %
+\newcommand{\grpindex}[2]{\left|#1:#2\right |}
+\newcommand{\order}[1]{\left|#1\right|}
+
+
+% ---- Theory of permutations ---- &
+\newcommand{\Sym}{\mathfrak{S}}
+\newcommand{\Paut}{\operatorname{Paut}}
+\newcommand{\fix}{\operatorname{fix}}
+
+% ----- Shortcuts ----- %
+\newcommand{\mbf}{\mathbf{f}}
